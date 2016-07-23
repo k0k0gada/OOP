@@ -141,21 +141,21 @@ public class SimpleNotePad implements INotePad {
 		return sc.nextInt();
 	}
 
-	public boolean searchWord() {
+	public void searchWord() {
 		String word = this.enterText();
 		for (int i = 0; i < pages.length; i++) {
 			if (this.pages[i].searchWord(word)) {
-				return true;
+				System.out.println("the word was found");
+				return;
 			}
 		}
-		return false;
 	}
 
 	public void printAllPagesWithDigits() {
 		boolean foundDigits = false;
 		for (int i = 0; i < pages.length; i++) {
 			if (this.pages[i].searchDigits()) {
-				this.pages[i].showPage();
+				System.out.println(this.pages[i].showPage());
 				foundDigits = true;
 			}
 		}

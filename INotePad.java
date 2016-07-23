@@ -9,9 +9,8 @@ public interface INotePad {
 
 	void showAllPages();// showInfo
 
-	boolean searchWord();//searches for e spec. word
-	
-	void printAllPagesWithDigits();//if the page contains digits
-	
-	
+	void searchWord();// searches for a spec. word
+
+	void printAllPagesWithDigits();// if the page contains digits
+
 }
